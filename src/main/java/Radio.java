@@ -3,7 +3,8 @@ public class Radio {
 
 
     //   RadioStationNumber
-    public int currentStationNumber;
+    private int currentStationNumber = 0;
+    private int soundVolume = 0;
 
     public int getCurrentStationNumber() {
         return currentStationNumber;
@@ -36,7 +37,7 @@ public class Radio {
     }
 
     //     SoundVolume
-    public int soundVolume;
+
 
     public int getSoundVolume() {
         return soundVolume;
@@ -53,13 +54,15 @@ public class Radio {
     }
 
     public void increaseVolume() {
-        if (soundVolume < 100)
+        if (soundVolume < 100) {
             soundVolume = soundVolume + 1;
+        }
     }
 
     public void volumeReduction() {
-        if (soundVolume > 0)
+        if (soundVolume > 0) {
             soundVolume = soundVolume - 1;
+        }
     }
 }
 
